@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="637.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+    <AnchorPane layoutX="64.0" layoutY="37.0" minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="273.0">
+         <children>
+            <TextField layoutX="64.0" layoutY="45.0" promptText="Full Name" />
+            <Slider blockIncrement="1.0" layoutX="72.0" layoutY="135.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" />
+            <Slider blockIncrement="1.0" layoutX="67.0" layoutY="235.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" />
+            <Slider blockIncrement="1.0" layoutX="66.0" layoutY="337.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" />
+            <Slider blockIncrement="100.0" layoutX="29.0" layoutY="413.0" majorTickUnit="100.0" max="1200.0" min="100.0" minorTickCount="1" prefHeight="38.0" prefWidth="521.0" showTickLabels="true" showTickMarks="true" />
+            <Button layoutX="464.0" layoutY="500.0" mnemonicParsing="false" text="View others" />
+            <Text layoutX="58.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter your full name:" />
+            <Text layoutX="67.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On a scale of 1 to 5 how clean are you?" />
+            <Text layoutX="67.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="On a scale of 1 to 5 how social are you?" />
+            <Text layoutX="67.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How many roommates are you looking for?" />
+            <Text layoutX="64.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Max amount of money for rent:" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
