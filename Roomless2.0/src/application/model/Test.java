@@ -1,5 +1,7 @@
 package application.model;
 
+import java.awt.Label;
+
 /**
  * Personality test for new users
  * @author stephanie
@@ -16,6 +18,9 @@ public class Test {
 	private int price;   // max amount of money per month
 	private boolean start;
 	
+	/**
+	 * Constructor for the test
+	 */
 	public Test () {
 		name = "";
 		age = 0;
@@ -26,14 +31,7 @@ public class Test {
 		start = true;
 	}
 	
-	public String getName () {
-		return name;
-	}
 	
-	public void update (String text) {
-		if (start) {
-			
-		}
-	}
+	
 
 }
