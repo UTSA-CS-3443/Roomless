@@ -23,17 +23,11 @@ import javafx.scene.Scene;
 public class TestController implements EventHandler <ActionEvent>{
 	
 	@FXML
-	private TextField getName;
-	private Label output;
+	private TextField getName;	// get the full name of the user from "Test"
+	private Label output;		
 	private Test test;
 	
 	final Label label = new Label();
-	
-
-	public TestController() {
-		super();
-		this.test = new Test ();
-	}
 	
 	@Override
 	public void handle(ActionEvent e) {
@@ -51,7 +45,7 @@ public class TestController implements EventHandler <ActionEvent>{
 		 * 		4 (or 6). Logout and close the application
 		 */
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("Roomless"));
+			Parent root = FXMLLoader.load(getClass().getResource("Roomless")); // change to start up once created
 			Main.stage.setScene (new Scene(root, 700, 650));
 			Main.stage.show();
 		} catch (Exception exception) {
@@ -64,8 +58,8 @@ public class TestController implements EventHandler <ActionEvent>{
 	 * Save the information from the user on the TEST part of the application
 	 * @param event
 	 */
-	/*private void handleSave (ActionEvent event) {
+	public void handleSave (ActionEvent event) {
 		System.out.println(getName.getText());
-	}*/
+	}
 
 }

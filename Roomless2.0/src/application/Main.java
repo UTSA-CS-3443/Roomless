@@ -20,7 +20,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("view/TestView.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("view/TestView.fxml")); // change to startup page when created
 			primaryStage.setScene(new Scene(root, 700,650));
 			primaryStage.setTitle("Roomless");
 			primaryStage.show();

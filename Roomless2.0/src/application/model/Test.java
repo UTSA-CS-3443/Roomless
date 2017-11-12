@@ -21,7 +21,7 @@ public class Test {
 	/**
 	 * Constructor for the test
 	 */
-	public Test () {
+	public Test (String user) {
 		name = "";
 		age = 0;
 		clean = 0;
