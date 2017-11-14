@@ -46,7 +46,7 @@ public class TestController implements EventHandler <ActionEvent>{
 		 */
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Roomless")); // change to start up once created
-			Main.stage.setScene (new Scene(root, 700, 650));
+			Main.stage.setScene (new Scene(root, 700, 500));
 			Main.stage.show();
 		} catch (Exception exception) {
 			exception.printStackTrace();
