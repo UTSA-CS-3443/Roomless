@@ -10,13 +10,14 @@
 <AnchorPane prefHeight="424.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TestController">
    <children>
     <AnchorPane layoutX="64.0" layoutY="37.0" minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="273.0" />
-      <GridPane layoutX="19.0" layoutY="51.0" prefHeight="337.0" prefWidth="664.0">
+      <GridPane layoutX="19.0" layoutY="25.0" prefHeight="374.0" prefWidth="664.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="281.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="328.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
@@ -24,18 +25,20 @@
             <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="56.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" text="SAVE" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" text="View others" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button mnemonicParsing="false" text="SAVE" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" text="View others" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField promptText="Full Name" GridPane.columnIndex="1" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Please enter your full name:" />
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="How many roommates are you looking&#10;for?&#10;" GridPane.rowIndex="1" />
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your cleanliness?" GridPane.rowIndex="2" />
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your sociability" GridPane.rowIndex="3" />
-            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="What is the max amount of money you'd&#10;like to spend on rent per month?" GridPane.rowIndex="4" />
-            <Slider blockIncrement="100.0" majorTickUnit="100.0" max="1000.0" min="300.0" minorTickCount="0" prefHeight="38.0" prefWidth="335.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="How many roommates are you looking&#10;for?&#10;" GridPane.rowIndex="2" />
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your cleanliness?" GridPane.rowIndex="3" />
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your sociability" GridPane.rowIndex="4" />
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="What is the max amount of money you'd&#10;like to spend on rent per month?" GridPane.rowIndex="5" />
+            <Slider blockIncrement="100.0" majorTickUnit="100.0" max="1000.0" min="300.0" minorTickCount="0" prefHeight="38.0" prefWidth="335.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextArea prefHeight="200.0" prefWidth="200.0" text="Please enter your age:" GridPane.rowIndex="1" />
+            <TextField promptText="Age" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

@@ -1,7 +1,7 @@
 package application.model;
 
 import java.awt.Label;
-
+import application.io.CurrentUser; // create user with this class
 /**
  * Personality test for new users
  * @author stephanie
