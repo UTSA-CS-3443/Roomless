@@ -29,7 +29,7 @@
             <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Button mnemonicParsing="false" text="SAVE" GridPane.rowIndex="6" />
-            <Button mnemonicParsing="false" text="View others" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#viewOthers" text="View others" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField promptText="Full Name" GridPane.columnIndex="1" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Please enter your full name:" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="How many roommates are you looking&#10;for?&#10;" GridPane.rowIndex="2" />

@@ -16,6 +16,7 @@ public class CurrentUser {
 	
 	/**
 	 * Constructor
+	 * @param the users name
 	 */
 	public CurrentUser (String name) {
 		this.name = name;

@@ -1,9 +1,7 @@
 package application.controller;
 
 import application.model.Test;
-
 import java.awt.TextField;
-
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -11,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import javafx.scene.Scene;
 
 /**
@@ -55,6 +54,20 @@ public class TestController implements EventHandler <ActionEvent>{
 		
 	}
 	
+	
+	/**
+	 * Go the view users screen: WORKING! :)
+	 */
+	@FXML
+	public void viewOthers () {
+		try {
+			Parent root1 = FXMLLoader.load(getClass().getResource("../view/OthersView.fxml"));
+			Main.stage.setScene(new Scene (root1, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
 	
 	/**
 	 * Save the information from the user in the test screen
