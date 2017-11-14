@@ -21,7 +21,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("view/TestView.fxml")); // change to startup page when created
-			primaryStage.setScene(new Scene(root, 700,650));
+			primaryStage.setScene(new Scene(root, 700,500));
 			primaryStage.setTitle("Roomless");
 			primaryStage.show();
 		} catch(Exception e) {

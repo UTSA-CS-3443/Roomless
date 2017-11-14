@@ -54,12 +54,6 @@ public class TestController implements EventHandler <ActionEvent>{
 		
 	}
 	
-	/**
-	 * Save the information from the user on the TEST part of the application
-	 * @param event
-	 */
-	public void handleSave (ActionEvent event) {
-		System.out.println(getName.getText());
-	}
+	
 
 }
