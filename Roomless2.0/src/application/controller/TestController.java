@@ -23,10 +23,10 @@ import javafx.scene.Scene;
 public class TestController implements EventHandler <ActionEvent>{
 	
 	@FXML
-	private TextField getName;	// get the full name of the user from "Test"
+	private TextField Input;	// get the full name of the user from "Test"
 	private Label output;		
 	private Test test;
-	
+	private String name = null;		// get the name from the user
 	final Label label = new Label();
 	
 	@Override
@@ -52,8 +52,17 @@ public class TestController implements EventHandler <ActionEvent>{
 			exception.printStackTrace();
 		}
 		
+		
 	}
 	
+	
+	/**
+	 * Save the information from the user in the test screen
+	 */
+	@FXML
+	public void SaveUser () {
+		
+	}
 	
 
 }

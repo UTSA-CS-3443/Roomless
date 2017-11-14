@@ -31,7 +31,14 @@ public class Test {
 		start = true;
 	}
 	
-	
+	/**
+	 * setup the information for the provided user
+	 * @param user
+	 */
+	public void Setup (String user) {
+		
+		
+	}
 	
 
 }
