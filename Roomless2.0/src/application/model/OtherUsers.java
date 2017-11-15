@@ -8,5 +8,7 @@ package application.model;
  */
 
 public class OtherUsers {
+	
+	
 
 }

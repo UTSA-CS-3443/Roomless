@@ -1,6 +1,7 @@
 package application.controller;
 
 import application.model.Test;
+import java.awt.Button;
 import java.awt.TextField;
 import application.Main;
 import javafx.event.ActionEvent;
@@ -9,8 +10,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+
 
 /**
  * Controller for the test we will give the user
@@ -22,11 +25,9 @@ import javafx.scene.Scene;
 public class TestController implements EventHandler <ActionEvent>{
 	
 	@FXML
-	private TextField Input;	// get the full name of the user from "Test"
-	private Label output;		
-	private Test test;
-	private String name = null;		// get the name from the user
+	private TextField Input;			// get the full name of the user from "Test"
 	final Label label = new Label();
+	Button button;						// button for any .setOnAction
 	
 	@Override
 	public void handle(ActionEvent e) {
@@ -69,13 +70,39 @@ public class TestController implements EventHandler <ActionEvent>{
 		}
 	}
 	
-	/**
-	 * Save the information from the user in the test screen
-	 */
-	@FXML
-	public void SaveUser () {
-		
-	}
+	/*************************************************************************
+	 * 		 GET INFORMATION FROM THE USER TO LOAD INTO USER INFORMATION	 *
+	 ************************************************************************/
+	@FXML private TextField fullName;				// get the full name from the user
+	@FXML private TextField age;					// get the age of the user
+	Slider mateSlider = new Slider ();				// create slider to get input from user for value: roommates
+	Slider cleanSlider = new Slider();				// create slider to get input from user for value: clean
+	Slider socialSlider = new Slider();				// create slider to get input from user for value: sociability
+	Slider rentSlider = new Slider();				// create slider to get input from user for value: max rent amount
 	
-
+	
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
