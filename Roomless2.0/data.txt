@@ -1,4 +1,0 @@
-Jane Doe,20,1,5,1,500
-Sara Smith,22,3,3,1,600
-Michael Scott,25,3,5,3,600
-Tom Thomson,22,5,1,3,700
