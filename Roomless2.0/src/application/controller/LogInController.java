@@ -51,32 +51,61 @@ public class LogInController implements EventHandler <ActionEvent> {
 	 */
 	public void attemptLogIn() {
 		
-		viewTest();//Currently the log in button redirects to the TestView.fmxl
+		viewMain();//Currently the log in button redirects to the MainView.fmxl
 		
 		/**
 		 * TODO:
 		 * 	Take input from username field and PIN field
-		 * 	Compare these to the list of users
-		 * 	If sucessful log in, send to main program
-		 * 	If unsucessful attempt, send to a failure screen that has a return to StartupView button
-		 * 	
+		 * 	Compare these to the list of users in data.txt
+		 * 	If successful log in, send to main program
+		 * 	If unsuccessful attempt, send to a failure screen that has a return to StartupView button
 		 */
 	}
 	
 	/**
-	 * Go to the view test screen
-	 * This should probably be removed later
+	 * Go to the failure screen
 	 */
 	
 	@FXML
-	public void viewTest () {
+	public void viewFailure () {
 		try {
-			Parent root2 = FXMLLoader.load(getClass().getResource("../view/TestView.fxml"));
-			Main.stage.setScene(new Scene (root2, 700, 500));
+			Parent root4 = FXMLLoader.load(getClass().getResource("../view/LoginFailedView.fxml"));
+			Main.stage.setScene(new Scene (root4, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
+	
+	/**
+	 * Go to the main screen
+	 */
+	
+	@FXML
+	public void viewMain () {
+		try {
+			Parent root3 = FXMLLoader.load(getClass().getResource("../view/MainView.fxml"));
+			Main.stage.setScene(new Scene (root3, 700, 500));
 			Main.stage.show();
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
 	}
 
+	/**
+	 * Go to the new account screen
+	 */
+	
+	@FXML
+	public void viewNewAccount () {
+		try {
+			Parent root5 = FXMLLoader.load(getClass().getResource("../view/NewAccountView.fxml"));
+			Main.stage.setScene(new Scene (root5, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
 }

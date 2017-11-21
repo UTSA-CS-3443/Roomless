@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="315.0" prefWidth="364.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.NewAccountViewController">
+   <children>
+      <Pane layoutX="-100.0" layoutY="-100.0" prefHeight="356.0" prefWidth="375.0">
+         <children>
+            <Button layoutX="249.0" layoutY="234.0" mnemonicParsing="false" onAction="#retry" text="Return" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -41,5 +41,6 @@
             <Button mnemonicParsing="false" text="SAVE" GridPane.rowIndex="6" />
          </children>
       </GridPane>
+      <Button layoutX="631.0" layoutY="13.0" mnemonicParsing="false" onAction="#viewMain" text="Return" />
    </children>
 </AnchorPane>

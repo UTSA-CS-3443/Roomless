@@ -70,6 +70,22 @@ public class TestController implements EventHandler <ActionEvent>{
 		}
 	}
 	
+	/**
+	 * Go to the main screen
+	 */
+	
+	@FXML
+	public void viewMain () {
+		try {
+			Parent root3 = FXMLLoader.load(getClass().getResource("../view/MainView.fxml"));
+			Main.stage.setScene(new Scene (root3, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+
+	
 	/*************************************************************************
 	 * 		 GET INFORMATION FROM THE USER TO LOAD INTO USER INFORMATION	 *
 	 ************************************************************************/
