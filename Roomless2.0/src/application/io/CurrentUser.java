@@ -13,18 +13,14 @@ public class CurrentUser {
 	private int social;			// how social they are
 	private int mates;			// number of roommates looking for
 	private int price;			// max amount of money per month
+	private int temp;			// preferred temp of user: 1 for hot 0 for cold
 	
 	/**
 	 * Constructor
 	 * @param the users name
 	 */
-	public CurrentUser (String name, int age, int clean, int social, int mates, int price) {
+	public CurrentUser (String name) {
 		this.name = name;
-		this.age = age;
-		this.clean = clean;
-		this.social = social;
-		this.mates = mates;
-		this.price = price;
 	}
 	/**
 	 * Set the name of the user
@@ -112,11 +108,31 @@ public class CurrentUser {
 		return mates;
 	}
 	/**
+	 * set users preferred temp
+	 * @param temp
+	 */
+	public void setTemp (int temp) {
+		this.temp = temp;
+	}
+	/**
+	 * get the users preferred temp
+	 */
+	public int getTemp() {
+		return temp;
+	}
+	/**
 	 * Return string for needed information
 	 */
 	public String toString() {
+		String pref = null;
+		if (getTemp() == 1) {
+			pref = "cold";
+		} else {
+			pref = "warm";
+		}
 		String info = ( "User: " + getName() + "\nPreferred number of roommates: " + getMates() +
 						"\nUsers cleanliness: " + getClean() + "\nUsers sociability: " + getSocial() +
+						"\nUsers preferred temp: " + pref +
 						"\nUsers max amount of rent per month: " + getPrice() + "\n");
 		return (info);
 	}
