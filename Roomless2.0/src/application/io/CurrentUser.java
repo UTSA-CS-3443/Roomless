@@ -18,8 +18,27 @@ public class CurrentUser {
 	 * Constructor
 	 * @param the users name
 	 */
-	public CurrentUser (String name) {
+	public CurrentUser (String name, int age, int clean, int social, int mates, int price) {
 		this.name = name;
+		this.age = age;
+		this.clean = clean;
+		this.social = social;
+		this.mates = mates;
+		this.price = price;
+	}
+	/**
+	 * Set the name of the user
+	 * @param name
+	 */
+	public void setName (String name) {
+		this.name = name;
+	}
+	/**
+	 * Get the name of the user
+	 * @return
+	 */
+	public String getName() {
+		return name;
 	}
 	/**
 	 * set the age of the user
@@ -92,6 +111,38 @@ public class CurrentUser {
 	public int getMates () {
 		return mates;
 	}
-	
+	/**
+	 * Return string for needed information
+	 */
+	public String toString() {
+		String info = ( "User: " + getName() + "\nPreferred number of roommates: " + getMates() +
+						"\nUsers cleanliness: " + getClean() + "\nUsers sociability: " + getSocial() +
+						"\nUsers max amount of rent per month: " + getPrice() + "\n");
+		return (info);
+	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

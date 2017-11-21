@@ -18,7 +18,7 @@ import javafx.scene.Scene;
 /**
  * Controller for the test we will give the user
  * Purpose:
- * 		Get information from the user to store in the .txt file
+ * 		Get information from the user
  * @author stephanie
  *
  */
