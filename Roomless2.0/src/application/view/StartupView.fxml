@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <SplitPane dividerPositions="0.4825174825174825" layoutX="-206.0" layoutY="-186.0" orientation="VERTICAL" prefHeight="431.0" prefWidth="477.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="560.0">
+               <children>
+                  <PasswordField layoutX="161.0" layoutY="133.0" prefHeight="25.0" prefWidth="200.0" />
+                  <TextField layoutX="161.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Button layoutX="312.0" layoutY="164.0" mnemonicParsing="false" text="Log in" />
+                  <TextArea layoutX="87.0" layoutY="99.0" prefHeight="25.0" prefWidth="70.0" text="Username:" />
+                  <TextArea layoutX="87.0" layoutY="133.0" prefHeight="25.0" prefWidth="70.0" text="Password:" />
+                  <TextArea layoutX="39.0" layoutY="14.0" prefHeight="81.0" prefWidth="252.0" text="WELCOME">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextArea>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="475.0">
+               <children>
+                  <TextArea layoutX="29.0" prefHeight="81.0" prefWidth="206.0" text="New User?">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextArea>
+                  <TextField layoutX="29.0" layoutY="81.0" prefHeight="25.0" prefWidth="122.0" text="Create Username:" />
+                  <TextArea layoutX="29.0" layoutY="118.0" prefHeight="25.0" prefWidth="122.0" text="Create Password:" />
+                  <PasswordField layoutX="163.0" layoutY="118.0" prefHeight="25.0" prefWidth="200.0" />
+                  <TextField layoutX="163.0" layoutY="81.0" prefHeight="25.0" prefWidth="200.0" />
+                  <Button layoutX="311.0" layoutY="160.0" mnemonicParsing="false" text="Create" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
