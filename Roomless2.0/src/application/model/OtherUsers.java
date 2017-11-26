@@ -12,5 +12,4 @@ import application.test.UsersTest;
 public class OtherUsers {
 	
 	
-
 }

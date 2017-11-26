@@ -14,6 +14,7 @@ public class CurrentUser {
 	private int mates;			// number of roommates looking for
 	private int price;			// max amount of money per month
 	private int temp;			// preferred temp of user: 1 for hot 0 for cold
+	private String email;		// email for the user
 	
 	/**
 	 * Constructor
@@ -121,6 +122,19 @@ public class CurrentUser {
 		return temp;
 	}
 	/**
+	 * set the users email
+	 * @param email
+	 */
+	public void setEmail (String email) {
+		this.email = email;
+	}
+	/**
+	 * return users email
+	 */
+	public String getEmail () {
+		return email;
+	}
+	/**
 	 * Return string for needed information
 	 */
 	public String toString() {
@@ -130,35 +144,14 @@ public class CurrentUser {
 		} else {
 			pref = "warm";
 		}
-		String info = ( "User: " + getName() + "\nPreferred number of roommates: " + getMates() +
-						"\nUsers cleanliness: " + getClean() + "\nUsers sociability: " + getSocial() +
-						"\nUsers preferred temp: " + pref +
-						"\nUsers max amount of rent per month: " + getPrice() + "\n");
+		String info = ( getName() + ", " + getAge() + "\nROMMATES: " + getMates() +
+						"\nCLEANLINESS: " + getClean() + "\nSOCIABILITY: " + getSocial() +
+						"\nTEMP: " + pref +
+						"\nMAX RENT: " + getPrice() + "\n" +
+						"CONTACT: " + email );
 		return (info);
 	}
 	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
