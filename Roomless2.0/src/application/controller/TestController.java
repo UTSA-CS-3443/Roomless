@@ -86,15 +86,6 @@ public class TestController implements EventHandler <ActionEvent>{
 	}
 
 	
-	/*************************************************************************
-	 * 		 GET INFORMATION FROM THE USER TO LOAD INTO USER INFORMATION	 *
-	 ************************************************************************/
-	@FXML private TextField fullName;				// get the full name from the user
-	@FXML private TextField age;					// get the age of the user
-	@FXML Slider mateSlider;				// create slider to get input from user for value: roommates
-	@FXML Slider cleanSlider;				// create slider to get input from user for value: clean
-	@FXML Slider socialSlider;				// create slider to get input from user for value: sociability
-	@FXML Slider rentSlider;				// create slider to get input from user for value: max rent amount
 	
 	
 	
