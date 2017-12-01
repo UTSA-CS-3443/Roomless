@@ -62,7 +62,7 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	@FXML
 	public void viewTest () {
 		try {
-			Parent root2 = FXMLLoader.load(getClass().getResource("../view/TestView.fxml"));
+			Parent root2 = FXMLLoader.load(getClass().getResource("../view/NewAccountView.fxml"));
 			Main.stage.setScene(new Scene (root2, 700, 500));
 			Main.stage.show();
 		} catch (Exception exception) {

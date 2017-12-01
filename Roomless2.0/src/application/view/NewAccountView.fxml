@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -9,8 +10,12 @@
    <children>
       <Pane layoutX="-100.0" layoutY="-100.0" prefHeight="356.0" prefWidth="375.0">
          <children>
-            <Button layoutX="249.0" layoutY="234.0" mnemonicParsing="false" onAction="#retry" text="Return" />
+            <Label layoutX="106.0" layoutY="118.0" text="Name:" />
+            <Label layoutX="109.0" layoutY="212.0" text="Email:" />
+            <TextField fx:id="userName" layoutX="214.0" layoutY="110.0" prefHeight="51.0" prefWidth="236.0" />
+            <TextField fx:id="email" layoutX="214.0" layoutY="204.0" prefHeight="51.0" prefWidth="236.0" />
          </children>
       </Pane>
+      <Button layoutX="263.0" layoutY="264.0" mnemonicParsing="false" onAction="#saveNewAccount" text="Create Acct." />
    </children>
 </AnchorPane>
