@@ -5,6 +5,7 @@ import java.awt.Button;
 import java.awt.TextField;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import application.Main;
@@ -15,7 +16,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.Slider;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
@@ -52,22 +52,26 @@ public class LogInController implements EventHandler <ActionEvent> {
 	
 	/**
 	 * User has clicked the log in button on the startup view
+	 * 
+	 * Takes input from username field and PIN field
+	 * Compares these to the list of users in data.txt
+	 * If successful log in, sends to main program
+	 * If unsuccessful attempt, sends to a failure screen that has a return to StartupView button
+	 * 
 	 * @throws FileNotFoundException 
 	 */
 	public void attemptLogIn() throws FileNotFoundException {
 		
-		viewMain();//Currently the log in button redirects to the MainView.fmxl
-		
 		/**
 		 * TODO:
-		 * 	Take input from username field and PIN field DONE
-		 * 	Compare these to the list of users in data.txt
-		 * 	If successful log in, send to main program
-		 * 	If unsuccessful attempt, send to a failure screen that has a return to StartupView button
+		 * 	
 		 */
 		String name = userName.getText( );
 		String Pin = PIN.getText( );
+		ArrayList<String> possibleNames = new ArrayList<String>();
+		ArrayList<String> possiblePINS = new ArrayList<String>();
 		
+		//read in data from file
 		File file = new File("data.txt");
 		Scanner scan = new Scanner( file );
 		while(scan.hasNext()){
@@ -75,10 +79,40 @@ public class LogInController implements EventHandler <ActionEvent> {
 			if(line.startsWith("*")) {//skips comments in the file
 				continue;
 			}
-			
+			String[] splitArr = line.split(",");
+			if (splitArr.length > 2) {//If length is not at least 3, a PIN has not been assigned to this name 
+									  //(should be at least name, PIN, and email) 
+									  //(It is assumed there is always a name and email if there is a line, but PIN may be missing)
+				possibleNames.add(splitArr[0]);
+				possiblePINS.add(splitArr[1]);
+			}
 		}
-		scan.close();
 		
+		if(possibleNames.size() != possiblePINS.size()) {
+			System.out.println("WARNING! Bad data found in data file: mismatching number of names/PINs");;
+			System.exit(-1);
+		}
+		
+		int position = 0;//Remembers which name we are on to match to its PIN
+		boolean loggedIn = false;
+		for(String s: possibleNames) {
+			if(name.compareTo(s) == 0) {//match found
+				if(Pin.compareTo(possiblePINS.get(position)) == 0) {
+					//Successful login
+					loggedIn = true;
+				}
+			}
+			position++;
+		}
+		
+		if(loggedIn) {
+			viewMain();
+			//TODO: needs to set a global variable of who is logged in
+		}else{
+			viewFailure();
+		}
+		
+		scan.close();
 	}
 	
 	/**
