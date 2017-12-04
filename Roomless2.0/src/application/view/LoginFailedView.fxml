@@ -6,17 +6,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.controller.LogInFailedController">
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LogInFailedController">
    <children>
       <Pane layoutX="-100.0" layoutY="-100.0" prefHeight="571.0" prefWidth="598.0">
          <children>
-            <TextArea layoutX="217.0" layoutY="186.0" prefHeight="200.0" prefWidth="293.0" text="Login Failed!">
+            <Button layoutX="329.0" layoutY="416.0" mnemonicParsing="false" onAction="#retry" text="Return" />
+            <Label layoutX="242.0" layoutY="197.0" prefHeight="157.0" prefWidth="226.0" text="Login Failed!">
                <font>
-                  <Font size="36.0" />
+                  <Font size="39.0" />
                </font>
-            </TextArea>
-            <Button layoutX="338.0" layoutY="418.0" mnemonicParsing="false" onAction="#retry" text="Return" />
+            </Label>
          </children>
       </Pane>
    </children>

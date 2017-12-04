@@ -11,9 +11,9 @@
          <children>
             <Button layoutX="442.0" layoutY="110.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
             <Button layoutX="264.0" layoutY="219.0" mnemonicParsing="false" onAction="#viewTest" text="Take Test" />
-            <TextArea layoutX="108.0" layoutY="110.0" prefHeight="25.0" prefWidth="118.0" text="Logged in as:" />
-            <TextArea layoutX="234.0" layoutY="110.0" prefHeight="25.0" prefWidth="202.0" text="User" />
             <Button layoutX="256.0" layoutY="296.0" mnemonicParsing="false" onAction="#viewOthers" text="View Others" />
+            <Label layoutX="138.0" layoutY="110.0" prefHeight="25.0" prefWidth="80.0" text="Logged in as:" />
+            <Label layoutX="224.0" layoutY="110.0" prefHeight="25.0" prefWidth="203.0" text="Default" />
          </children>
       </Pane>
    </children>
