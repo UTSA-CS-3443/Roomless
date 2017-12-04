@@ -9,7 +9,8 @@ We'll ask you some basic questions that pertain to your lifestyle, then show you
 Instructions:
 
   1. Clone the repository
-  2. Open the Main.java src > application (package) > Main.java
+  2. Open the Main.java file 
+      src > application package > Main.java
   3. Run the project
   4. Create an account
   5. Take the test
