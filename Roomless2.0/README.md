@@ -7,7 +7,7 @@ After that, you will be able to email people who have a similiar lifestyle as yo
 
 Instructions:
 
-  1. Close the repository
+  1. Clone the repository
   2. Open the Main.java
         src > application (package) > Main.java
   3. Run the project
