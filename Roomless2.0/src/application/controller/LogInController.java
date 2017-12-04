@@ -39,7 +39,6 @@ public class LogInController implements EventHandler <ActionEvent> {
 	@Override
 	public void handle(ActionEvent e) {
 		// TODO Auto-generated method stub
-		// Not sure what goes here yet
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Roomless"));
 			Main.stage.setScene (new Scene(root, 700, 500));
@@ -62,10 +61,6 @@ public class LogInController implements EventHandler <ActionEvent> {
 	 */
 	public void attemptLogIn() throws FileNotFoundException {
 		
-		/**
-		 * TODO:
-		 * 	
-		 */
 		String name = userName.getText( );
 		String Pin = PIN.getText( );
 		ArrayList<String> possibleNames = new ArrayList<String>();
