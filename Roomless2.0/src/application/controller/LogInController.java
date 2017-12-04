@@ -3,6 +3,10 @@ package application.controller;
 import application.model.Test;
 import java.awt.Button;
 import java.awt.TextField;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -27,7 +31,7 @@ import javafx.scene.Scene;
 public class LogInController implements EventHandler <ActionEvent> {
 	
 	@FXML
-	private TextField Username;			// get the username from Log In Page
+	private TextField userName;			// get the username from Log In Page
 	private PasswordField PIN; 			// get the PIN from Log In Page
 	final Label label = new Label();
 	Button button;						// button for any .setOnAction
@@ -48,18 +52,33 @@ public class LogInController implements EventHandler <ActionEvent> {
 	
 	/**
 	 * User has clicked the log in button on the startup view
+	 * @throws FileNotFoundException 
 	 */
-	public void attemptLogIn() {
+	public void attemptLogIn() throws FileNotFoundException {
 		
 		viewMain();//Currently the log in button redirects to the MainView.fmxl
 		
 		/**
 		 * TODO:
-		 * 	Take input from username field and PIN field
+		 * 	Take input from username field and PIN field DONE
 		 * 	Compare these to the list of users in data.txt
 		 * 	If successful log in, send to main program
 		 * 	If unsuccessful attempt, send to a failure screen that has a return to StartupView button
 		 */
+		String name = userName.getText( );
+		String Pin = PIN.getText( );
+		
+		File file = new File("data.txt");
+		Scanner scan = new Scanner( file );
+		while(scan.hasNext()){
+			String line = scan.nextLine();
+			if(line.startsWith("*")) {//skips comments in the file
+				continue;
+			}
+			
+		}
+		scan.close();
+		
 	}
 	
 	/**
