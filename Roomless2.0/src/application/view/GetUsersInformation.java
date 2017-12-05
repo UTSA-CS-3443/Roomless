@@ -31,13 +31,14 @@ public class GetUsersInformation {
 	    
 	    BufferedWriter writer = null;
 	    try {
-	        writer = new BufferedWriter(new FileWriter("./NewUser.txt"));
-	        writer.write(temp.getText());
-	        writer.write(age.getText());
-	        writer.write(clean.getText());
-	        writer.write(social.getText());
-	        writer.write(mates.getText());
+	        writer = new BufferedWriter(new FileWriter("./NewUser.txt", true));
+	        writer.write("," + age.getText() + ",");
+	        writer.write(clean.getText() + ",");
+	        writer.write(social.getText() + ",");
+	        writer.write(mates.getText() + ",");
+	        writer.write(temp.getText() + ",");
 	        writer.write(rent.getText());
+	        writer.flush();
 	    } catch (IOException e) {
 	        System.err.println(e);
 	    } finally {
@@ -45,7 +46,7 @@ public class GetUsersInformation {
 	            try {
 	                writer.close();
 	            } catch (IOException e) {
-	                System.err.println(e);
+	                
 	            }
 	        }
 	    }
