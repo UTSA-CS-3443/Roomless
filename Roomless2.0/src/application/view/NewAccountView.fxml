@@ -16,6 +16,6 @@
             <TextField fx:id="email" layoutX="214.0" layoutY="204.0" prefHeight="51.0" prefWidth="236.0" />
          </children>
       </Pane>
-      <Button layoutX="263.0" layoutY="264.0" mnemonicParsing="false" onAction="#saveNewAccount" text="Create Acct." />
+      <Button layoutX="234.0" layoutY="264.0" mnemonicParsing="false" onAction="#saveNewAccount" text="Save Info" />
    </children>
 </AnchorPane>

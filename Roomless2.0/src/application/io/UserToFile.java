@@ -13,7 +13,7 @@ import java.util.FormatterClosedException;
 public class UserToFile {	
 	
 	/**
-	 * The method that creates the new BufferedWriter and file. 
+	 * The method that writes the new user info to the file. 
 	 * 
 	 * @param test
 	 */

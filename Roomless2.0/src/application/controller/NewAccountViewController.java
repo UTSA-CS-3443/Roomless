@@ -63,12 +63,20 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 		// Call the to file method to write to data.txt
 		UserToFile.toFile(name, mail);
 		
-		// After the user input is saved go back to main login view.
+		// View the test after the info is saved
+		viewTest( );
+	}
+	
+	/**
+	 * Views the test and allows the user to take it. 
+	 */
+	@FXML
+	public void viewTest( ) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/StartupView.fxml"));
-			Main.stage.setScene(new Scene (root, 700, 500));
+			Parent root2 = FXMLLoader.load(getClass().getResource("../view/TestView.fxml"));
+			Main.stage.setScene(new Scene (root2, 700, 500));
 			Main.stage.show();
-		} catch(Exception exception) {
+		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
 	}
