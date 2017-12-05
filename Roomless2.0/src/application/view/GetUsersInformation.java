@@ -1,11 +1,15 @@
 package application.view;
 
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TextField;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import application.Main;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 
 public class GetUsersInformation {
 	
@@ -46,4 +50,34 @@ public class GetUsersInformation {
 	        }
 	    }
 	}
+	
+	/**
+	 * Go the view users screen
+	 */
+	@FXML
+	public void viewOthers () {
+		try {
+			Parent root1 = FXMLLoader.load(getClass().getResource("../view/OthersView.fxml"));
+			Main.stage.setScene(new Scene (root1, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Go to the main screen
+	 */
+	
+	@FXML
+	public void viewMain () {
+		try {
+			Parent root3 = FXMLLoader.load(getClass().getResource("../view/MainView.fxml"));
+			Main.stage.setScene(new Scene (root3, 700, 500));
+			Main.stage.show();
+		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
 }
