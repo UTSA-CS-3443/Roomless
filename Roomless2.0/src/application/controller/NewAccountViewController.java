@@ -21,6 +21,7 @@ import javafx.scene.control.Label;
  * Controls the creation of new accounts
  * @author Nick (saveNewAccount)
  * @author Derrick
+ * @author Christopher Nieland
  *
  */
 
@@ -33,9 +34,6 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 	
 	@FXML
 	private TextField email;
-	
-	@FXML
-	private Label pinLabel;
 	
 	private String pin = genPin.genPin();
 	
@@ -68,7 +66,8 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 	
 	/**
 	 * Gets the user input from the textfield and sets it to strings for
-	 * insertion into the file. 
+	 * insertion into the file. Also gets the pin that is generated and 
+	 * adds it to the file
 	 */
 	@FXML
 	public void saveNewAccount( ) {
@@ -96,9 +95,4 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 			exception.printStackTrace();
 		}
 	}
-	
-	/*public void setPinLabel(String newUser) 
-	{
-		pinLabel.textProperty().set(newUser);
-	} */
 }

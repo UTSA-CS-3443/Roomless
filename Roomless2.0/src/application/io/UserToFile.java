@@ -9,7 +9,7 @@ import application.GeneratePin;
  * Class that sends the new user info from the test to a text file. 
  * 
  * @author nsimm
- *
+ * @author Christopher
  */
 public class UserToFile {	
 	
