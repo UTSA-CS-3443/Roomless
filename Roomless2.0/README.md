@@ -16,7 +16,7 @@ Instructions:
   5. Enter your name and email
   6. Save the information
   7. You are now in the test view.
-  > Press Return to view your login information <br> <\br>
+  > Press Return to view your login information <br> 
   > Take the test and save your results
   8. View other users and find your perfect match!
 
