@@ -35,7 +35,7 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	
 	@FXML
 	private Label pinField;		//shows the user's pin
-
+	
 	@Override
 	public void handle(ActionEvent arg0) {
 		// TODO Auto-generated method stub

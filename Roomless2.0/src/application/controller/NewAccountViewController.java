@@ -2,6 +2,12 @@ package application.controller;
 
 import application.Main;
 import application.io.UserToFile;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import application.GeneratePin;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -9,6 +15,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Label;
 
 /**
  * Controls the creation of new accounts
@@ -18,12 +25,21 @@ import javafx.scene.control.TextField;
  */
 
 public class NewAccountViewController implements EventHandler <ActionEvent>{
+	
+	GeneratePin genPin = new GeneratePin();
+	
 	@FXML
 	private TextField userName;
 	
 	@FXML
 	private TextField email;
-
+	
+	@FXML
+	private Label pinLabel;
+	
+	private String pin = genPin.genPin();
+	
+	
 	@Override
 	public void handle(ActionEvent event) {
 		// TODO Auto-generated method stub
@@ -61,7 +77,7 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 		String mail = email.getText( );
 
 		// Call the to file method to write to data.txt
-		UserToFile.toFile(name, mail);
+		UserToFile.toFile(name, pin, mail);
 		
 		// View the test after the info is saved
 		viewTest( );
@@ -80,4 +96,9 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 			exception.printStackTrace();
 		}
 	}
+	
+	/*public void setPinLabel(String newUser) 
+	{
+		pinLabel.textProperty().set(newUser);
+	} */
 }
