@@ -80,20 +80,17 @@ public class LogInController implements EventHandler <ActionEvent> {
 		ArrayList<String> possiblePINS = new ArrayList<String>();
 		
 		//read in data from file
-		File file = new File("data.txt");
+		File file = new File("newUser.txt");
 		Scanner scan = new Scanner( file );
 		while(scan.hasNext()){
 			String line = scan.nextLine();
 			if(line.startsWith("*")) {//skips comments in the file
 				continue;
 			}
+			
 			String[] splitArr = line.split(",");
-			if (splitArr.length > 2) {//If length is not at least 3, a PIN has not been assigned to this name 
-									  //(should be at least name, PIN, and email) 
-									  //(It is assumed there is always a name and email if there is a line, but PIN may be missing)
-				possibleNames.add(splitArr[0]);
-				possiblePINS.add(splitArr[1]);
-			}
+			possibleNames.add(splitArr[0]);
+			possiblePINS.add(splitArr[1]);
 		}
 		
 		if(possibleNames.size() != possiblePINS.size()) {

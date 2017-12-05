@@ -3,6 +3,10 @@ package application.controller;
 import application.model.Test;
 import java.awt.Button;
 import java.awt.TextField;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -27,7 +31,10 @@ import javafx.scene.Scene;
 public class MainViewController implements EventHandler <ActionEvent> {
 	
 	@FXML
-	private Label loggedInUser;//should be changed when user logs in
+	private Label loggedInUser;	//shows the logged in user
+	
+	@FXML
+	private Label pinField;		//shows the user's pin
 
 	@Override
 	public void handle(ActionEvent arg0) {
@@ -46,7 +53,8 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	 */
 	@FXML
 	public void logout() {
-		//setUser("Default");
+		setUser("Default");
+		setPin("null");
 		
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/StartupView.fxml"));
@@ -57,14 +65,38 @@ public class MainViewController implements EventHandler <ActionEvent> {
 		}
 	}
 	
+	public void initialize() throws FileNotFoundException {
+		//read in data from file
+		File file = new File("newUser.txt");
+		Scanner scan = new Scanner(file);
+		while (scan.hasNext()) {
+			String line = scan.nextLine();
+			if (line.startsWith("*")) {// skips comments in the file
+				continue;
+			}
+
+			String[] splitArr = line.split(",");
+			setUser(splitArr[0]);
+			setPin(splitArr[1]);
+		}
+		scan.close();
+	}
+	
 	/**
 	 * For changing who is logged in
 	 * @param newUser
 	 */
-	/*
 	public void setUser(String newUser) {
 		loggedInUser.textProperty().set(newUser);
-	} */
+	} 
+	
+	/**
+	 * For changing the pin that is visible
+	 * @param newPin
+	 */
+	public void setPin(String newPin) {
+		pinField.textProperty().set(newPin);
+	}
 	
 	/**
 	 * Goes to the TestView
