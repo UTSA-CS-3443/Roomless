@@ -57,7 +57,7 @@ public class TestController implements EventHandler <ActionEvent>{
 	
 	
 	/**
-	 * Go the view users screen: WORKING! :)
+	 * Go the view users screen
 	 */
 	@FXML
 	public void viewOthers () {

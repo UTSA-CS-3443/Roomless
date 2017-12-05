@@ -26,11 +26,12 @@ import javafx.scene.Scene;
  */
 
 public class MainViewController implements EventHandler <ActionEvent> {
+	
+	
 
 	@Override
 	public void handle(ActionEvent arg0) {
 		// TODO Auto-generated method stub
-		// Not sure what goes here yet
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("Roomless"));
 			Main.stage.setScene (new Scene(root, 700, 500));
@@ -62,7 +63,7 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	@FXML
 	public void viewTest () {
 		try {
-			Parent root2 = FXMLLoader.load(getClass().getResource("../view/NewAccountView.fxml"));
+			Parent root2 = FXMLLoader.load(getClass().getResource("../view/TestView.fxml"));
 			Main.stage.setScene(new Scene (root2, 700, 500));
 			Main.stage.show();
 		} catch (Exception exception) {
