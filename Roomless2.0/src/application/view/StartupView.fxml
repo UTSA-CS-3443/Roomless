@@ -11,8 +11,8 @@
          <items>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="202.0" prefWidth="560.0">
                <children>
-                  <PasswordField layoutX="161.0" layoutY="133.0" prefHeight="25.0" prefWidth="200.0" />
-                  <TextField layoutX="161.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" />
+                  <PasswordField fx:id="PIN" layoutX="161.0" layoutY="133.0" prefHeight="25.0" prefWidth="200.0" />
+                  <TextField fx:id="UserName1" layoutX="161.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" />
                   <Button layoutX="312.0" layoutY="164.0" mnemonicParsing="false" onAction="#attemptLogIn" text="Log in" />
                   <Label layoutX="53.0" layoutY="33.0" prefHeight="17.0" prefWidth="209.0" text="Welcome">
                      <font>

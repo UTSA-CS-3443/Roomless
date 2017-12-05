@@ -1,13 +1,10 @@
 package application.controller;
 
 import application.model.Test;
-import java.awt.Button;
-import java.awt.TextField;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
-
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -16,6 +13,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 
@@ -31,10 +29,10 @@ import javafx.scene.Scene;
 public class LogInController implements EventHandler <ActionEvent> {
 	
 	@FXML
-	private TextField userName;			// get the username from Log In Page
+	private TextField UserName1;		// get the username from Log In Page
+	
+	@FXML
 	private PasswordField PIN; 			// get the PIN from Log In Page
-	final Label label = new Label();
-	Button button;						// button for any .setOnAction
 	
 	@Override
 	public void handle(ActionEvent e) {
@@ -51,18 +49,33 @@ public class LogInController implements EventHandler <ActionEvent> {
 	
 	/**
 	 * User has clicked the log in button on the startup view
-	 * 
+	 * @throws FileNotFoundException 
+	 */
+	@FXML
+	public void attemptLogIn() throws FileNotFoundException {
+		
+		String name = UserName1.getText( );
+		String Pin = PIN.getText( );
+		
+		if(readAndComp(name, Pin)) {
+			viewMain();
+		}else{
+			viewFailure();
+		}
+		
+	}
+	
+	/**
 	 * Takes input from username field and PIN field
 	 * Compares these to the list of users in data.txt
 	 * If successful log in, sends to main program
 	 * If unsuccessful attempt, sends to a failure screen that has a return to StartupView button
 	 * 
 	 * @throws FileNotFoundException 
+	 * @return Returns whether or not the user given information was a correct log in
 	 */
-	public void attemptLogIn() throws FileNotFoundException {
+	public boolean readAndComp(String name, String Pin) throws FileNotFoundException {
 		
-		String name = userName.getText( );
-		String Pin = PIN.getText( );
 		ArrayList<String> possibleNames = new ArrayList<String>();
 		ArrayList<String> possiblePINS = new ArrayList<String>();
 		
@@ -90,8 +103,9 @@ public class LogInController implements EventHandler <ActionEvent> {
 		
 		int position = 0;//Remembers which name we are on to match to its PIN
 		boolean loggedIn = false;
+		
 		for(String s: possibleNames) {
-			if(name.compareTo(s) == 0) {//match found
+			if(name .compareTo(s) == 0) {//match found
 				if(Pin.compareTo(possiblePINS.get(position)) == 0) {
 					//Successful login
 					loggedIn = true;
@@ -100,14 +114,10 @@ public class LogInController implements EventHandler <ActionEvent> {
 			position++;
 		}
 		
-		if(loggedIn) {
-			viewMain();
-			//TODO: needs to set a global variable of who is logged in
-		}else{
-			viewFailure();
-		}
+		
 		
 		scan.close();
+		return loggedIn;
 	}
 	
 	/**
