@@ -16,8 +16,9 @@ Instructions:
   5. Enter your name and email
   6. Save the information
   7. You are now in the test view.
-  > Press Return to view your login information <br> 
   > Take the test and save your results
+  > Press Return to view your login information
+  > Log back in at any time using your name and the PIN number provided on the main view.
   8. View other users and find your perfect match!
 
 ** USER INFORMATION WILL BE STORED IN THE TEXT FILE NewUser.txt **
