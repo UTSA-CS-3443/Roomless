@@ -1,6 +1,1 @@
-*Name,PIN,Age,Roomates,Max Rent,Cleanliness,Sociability,Temp(0 for cold, 1 for warm),email
-Max Amillion,0000,21,2,600,2,2,0,maaaax@hotmail.com
-Sarah Brown,0000,18,3,700,3,5,0,sbrown@yahoo.com
-Joyce Smith,0000,23,1,800,5,1,1,joyce@gmail.com
-Adam Solo,0000,20,3,400,4,5,0,skywalker66@sith.org
-Jim Halpert,0000,25,1,1000,3,1,0,jhalpert@dmi.com
+,

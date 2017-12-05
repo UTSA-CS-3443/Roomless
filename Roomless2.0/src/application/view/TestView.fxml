@@ -7,17 +7,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="529.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TestController">
+<AnchorPane prefHeight="529.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.GetUsersInformation">
    <children>
     <AnchorPane layoutX="64.0" layoutY="37.0" minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="273.0" />
-      <GridPane layoutX="19.0" layoutY="25.0" prefHeight="404.0" prefWidth="664.0">
+      <Button layoutX="631.0" layoutY="13.0" mnemonicParsing="false" onAction="#viewMain" text="Return" />
+      <GridPane layoutX="144.0" layoutY="64.0" prefHeight="410.0" prefWidth="420.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="281.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="328.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="322.0" minWidth="10.0" prefWidth="322.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="328.0" minWidth="10.0" prefWidth="79.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="64.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="63.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="142.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="159.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="65.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
@@ -25,27 +26,25 @@
             <RowConstraints maxHeight="106.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Slider blockIncrement="1.0" majorTickUnit="1.0" max="5.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Button mnemonicParsing="false" onAction="#viewOthers" text="View others" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="How many roommates are you looking&#10;for?&#10;" GridPane.rowIndex="1" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your cleanliness?" GridPane.rowIndex="2" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="On a scale of 1 to 5 how would you rate&#10;your sociability" GridPane.rowIndex="3" />
             <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="What is the max amount of money you'd&#10;like to spend on rent per month?" GridPane.rowIndex="5" />
-            <Slider blockIncrement="100.0" majorTickUnit="100.0" max="1000.0" maxWidth="-Infinity" min="300.0" minWidth="-Infinity" minorTickCount="0" prefHeight="38.0" prefWidth="335.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextArea prefHeight="200.0" prefWidth="200.0" text="Please enter your age:" />
-            <TextField promptText="Age" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="SAVE" GridPane.rowIndex="6" />
-            <TextArea prefHeight="200.0" prefWidth="200.0" text="Are you more comfortable in a cold or&#10;warm environment " GridPane.rowIndex="4" />
+            <TextArea editable="false" prefHeight="48.0" prefWidth="345.0" text="Please enter your age:" />
+            <TextField fx:id="age" prefHeight="25.0" prefWidth="267.0" promptText="Age" GridPane.columnIndex="1" />
+            <Button mnemonicParsing="false" onAction="#handleButton1Action" text="SAVE" GridPane.rowIndex="6" />
+            <TextArea editable="false" prefHeight="200.0" prefWidth="200.0" text="Are you more comfortable in a cold or&#10;warm environment " GridPane.rowIndex="4" />
             <AnchorPane prefHeight="47.0" prefWidth="251.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <CheckBox alignment="CENTER" layoutX="11.0" layoutY="18.0" mnemonicParsing="false" text="warm" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                  <CheckBox layoutX="173.0" layoutY="18.0" mnemonicParsing="false" text="cold" />
+                  <TextField fx:id="temp" layoutX="1.0" layoutY="20.0" prefHeight="25.0" prefWidth="98.0" promptText="cold/warm" />
                </children>
             </AnchorPane>
+            <TextField fx:id="mates" promptText="Roommates" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="clean" promptText="1-5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="social" prefHeight="25.0" prefWidth="100.0" promptText="1-5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="rent" promptText="300-1200" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button layoutX="631.0" layoutY="13.0" mnemonicParsing="false" onAction="#viewMain" text="Return" />
    </children>
 </AnchorPane>
