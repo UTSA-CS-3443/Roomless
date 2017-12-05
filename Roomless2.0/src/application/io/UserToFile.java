@@ -21,7 +21,7 @@ public class UserToFile {
 		Formatter output = null;
 		
 		try { 
-			output = new Formatter("data.txt");
+			output = new Formatter("NewUser.txt");
 		} catch (SecurityException e) {
 			System.err.println("Write permission denied.");
 			System.exit(1);
