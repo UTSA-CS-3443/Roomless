@@ -21,13 +21,13 @@ import javafx.scene.Scene;
  * Controls logging out via logout button on this view
  * 
  * @author Derrick
- * @author whoever implements logout code
  *
  */
 
 public class MainViewController implements EventHandler <ActionEvent> {
 	
-	
+	@FXML
+	private Label loggedInUser;//should be changed when user logs in
 
 	@Override
 	public void handle(ActionEvent arg0) {
@@ -39,7 +39,6 @@ public class MainViewController implements EventHandler <ActionEvent> {
 		} catch (Exception exception) {
 			exception.printStackTrace();
 		}
-		
 	}
 	
 	/**
@@ -47,6 +46,8 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	 */
 	@FXML
 	public void logout() {
+		//setUser("Default");
+		
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/StartupView.fxml"));
 			Main.stage.setScene(new Scene (root, 700, 500));
@@ -54,8 +55,16 @@ public class MainViewController implements EventHandler <ActionEvent> {
 		} catch(Exception exception) {
 			exception.printStackTrace();
 		}
-		//Code for logging out should go here or maybe above the try/catch
 	}
+	
+	/**
+	 * For changing who is logged in
+	 * @param newUser
+	 */
+	/*
+	public void setUser(String newUser) {
+		loggedInUser.textProperty().set(newUser);
+	} */
 	
 	/**
 	 * Goes to the TestView

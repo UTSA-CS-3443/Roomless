@@ -13,7 +13,7 @@
             <Button layoutX="264.0" layoutY="219.0" mnemonicParsing="false" onAction="#viewTest" text="Take Test" />
             <Button layoutX="256.0" layoutY="296.0" mnemonicParsing="false" onAction="#viewOthers" text="View Others" />
             <Label layoutX="138.0" layoutY="110.0" prefHeight="25.0" prefWidth="80.0" text="Logged in as:" />
-            <Label layoutX="224.0" layoutY="110.0" prefHeight="25.0" prefWidth="203.0" text="Default" />
+            <Label fx:id="loggedInUser" layoutX="224.0" layoutY="110.0" prefHeight="25.0" prefWidth="203.0" text="Default" />
          </children>
       </Pane>
    </children>
