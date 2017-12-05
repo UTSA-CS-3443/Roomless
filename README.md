@@ -10,7 +10,7 @@ Instructions:
 
   1. Clone the repository
   2. Open the Main.java file
-        a. src > application > Main.java
+        a.src > application > Main.java
   3. Run the project
   4. Create an account
   5. Enter your name and email
