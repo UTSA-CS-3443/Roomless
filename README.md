@@ -9,11 +9,10 @@ We'll ask you some basic questions that pertain to your lifestyle, then show you
 Instructions:
 
   1. Clone the repository
-  2. Open the Main.java file 
-      src > application package > Main.java
+  2. Open the Main.java file: src > application > Main.java
   3. Run the project
   4. Create an account
   5. Take the test
   6. View other users and find your perfect match!
 
-** USER INFORMATION WILL BE STORED IN THE TEXT FILE DATA.TXT **
+** USER INFORMATION WILL BE STORED IN THE TEXT FILE NewUser.txt **

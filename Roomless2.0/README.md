@@ -8,9 +8,10 @@ After that, you will be able to email people who have a similiar lifestyle as yo
 Instructions:
 
   1. Clone the repository
-  2. Open the Main.java
-        src > application (package) > Main.java
+  2. Open Main.java: src > application > Main.java
   3. Run the project
   4. Create an account
   5. Take the test
   6. View other users and find your perfect match!
+
+** NEW USER INFORMATION WILL BE SAVED IN THE TEXT FILE NewUser.txt ** 

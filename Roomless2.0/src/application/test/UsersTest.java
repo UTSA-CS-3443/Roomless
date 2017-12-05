@@ -1,6 +1,6 @@
 package application.test;
 
-import application.model.OtherUsers;
+
 import application.model.Test;
 import javafx.application.Platform;
 import application.io.CurrentUser;
