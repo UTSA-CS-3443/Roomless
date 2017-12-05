@@ -22,6 +22,7 @@ import application.test.UsersTest;
  * test page and login page
  * 
  * @author stephanie
+ * @author Elliott Soler (exitButtonAction)
  *
  */
 
@@ -56,8 +57,7 @@ public class OtherUsersController implements EventHandler<ActionEvent> {
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 * closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

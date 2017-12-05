@@ -20,7 +20,7 @@ import javafx.scene.Scene;
  * Purpose:
  * 		Get information from the user
  * @author stephanie
- *
+ * @author Elliott Soler (exitButtonAction)
  */
 public class TestController implements EventHandler <ActionEvent>{
 	
@@ -73,8 +73,7 @@ public class TestController implements EventHandler <ActionEvent>{
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 *  closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

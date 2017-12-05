@@ -3,12 +3,13 @@ package application.io;
 import java.io.*;
 import java.util.Formatter;
 import java.util.FormatterClosedException;
+import application.GeneratePin;
 
 /**
  * Class that sends the new user info from the test to a text file. 
  * 
  * @author nsimm
- *
+ * @author Christopher
  */
 public class UserToFile {	
 	
@@ -17,8 +18,8 @@ public class UserToFile {
 	 * 
 	 * @param test
 	 */
-	public static void toFile(String userName, String email) {
-		Formatter output = null;
+	public static void toFile(String userName, String pin, String email) {
+		Formatter output = null;		
 		
 		try { 
 			output = new Formatter("NewUser.txt");
@@ -31,7 +32,7 @@ public class UserToFile {
 		}
 		
 		try {
-			output.format("%s,%s", userName, email);
+			output.format("%s,%s,%s", userName, pin, email);
 		} catch(FormatterClosedException e) {
 			System.err.println("Error writing to file.");
 		}

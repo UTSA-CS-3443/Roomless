@@ -14,6 +14,7 @@
             <Label layoutX="109.0" layoutY="212.0" text="Email:" />
             <TextField fx:id="userName" layoutX="214.0" layoutY="110.0" prefHeight="51.0" prefWidth="236.0" />
             <TextField fx:id="email" layoutX="214.0" layoutY="204.0" prefHeight="51.0" prefWidth="236.0" />
+            <Text layoutX="109.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your pin is on the main page" />
          </children>
       </Pane>
       <Button layoutX="234.0" layoutY="264.0" mnemonicParsing="false" onAction="#saveNewAccount" text="Save Info" />

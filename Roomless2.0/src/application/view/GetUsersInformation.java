@@ -84,8 +84,7 @@ public class GetUsersInformation {
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 * closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

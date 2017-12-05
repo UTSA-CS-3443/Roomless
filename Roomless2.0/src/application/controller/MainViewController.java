@@ -25,6 +25,7 @@ import javafx.scene.Scene;
  * Controls logging out via logout button on this view
  * 
  * @author Derrick
+ * @author Elliott Soler (exitButtonAction)
  *
  */
 
@@ -35,7 +36,7 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	
 	@FXML
 	private Label pinField;		//shows the user's pin
-
+	
 	@Override
 	public void handle(ActionEvent arg0) {
 		// TODO Auto-generated method stub
@@ -127,8 +128,7 @@ public class MainViewController implements EventHandler <ActionEvent> {
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 *  closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

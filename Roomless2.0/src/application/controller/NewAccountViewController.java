@@ -2,6 +2,12 @@ package application.controller;
 
 import application.Main;
 import application.io.UserToFile;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+import application.GeneratePin;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -15,16 +21,24 @@ import javafx.stage.Stage;
  * Controls the creation of new accounts
  * @author Nick (saveNewAccount)
  * @author Derrick
+ * @author Christopher Nieland
+ * @author Elliott Soler (exitButtonAction0
  *
  */
 
 public class NewAccountViewController implements EventHandler <ActionEvent>{
+	
+	GeneratePin genPin = new GeneratePin();
+	
 	@FXML
 	private TextField userName;
 	
 	@FXML
 	private TextField email;
-
+	
+	private String pin = genPin.genPin();
+	
+	
 	@Override
 	public void handle(ActionEvent event) {
 		// TODO Auto-generated method stub
@@ -53,7 +67,8 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 	
 	/**
 	 * Gets the user input from the textfield and sets it to strings for
-	 * insertion into the file. 
+	 * insertion into the file. Also gets the pin that is generated and 
+	 * adds it to the file
 	 */
 	@FXML
 	public void saveNewAccount( ) {
@@ -62,7 +77,7 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 		String mail = email.getText( );
 
 		// Call the to file method to write to data.txt
-		UserToFile.toFile(name, mail);
+		UserToFile.toFile(name, pin, mail);
 		
 		// View the test after the info is saved
 		viewTest( );
@@ -83,8 +98,7 @@ public class NewAccountViewController implements EventHandler <ActionEvent>{
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 * closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

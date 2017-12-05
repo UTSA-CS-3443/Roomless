@@ -23,6 +23,7 @@ import javafx.scene.Scene;
  * 		Check to see if user submitted correct username/PIN combo and then set their info as the current user
  * 		This should also be the startup screen
  * @author Derrick
+ * @author Elliott Soler (exitButtonAction)
  * 
  */
 
@@ -164,8 +165,7 @@ public class LogInController implements EventHandler <ActionEvent> {
 	}
 	
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 * closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	

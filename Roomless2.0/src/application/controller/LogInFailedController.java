@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 /**
  * Controls the view for unsuccessful login attempts
  * @author Derrick
+ * @author Elliott Soler (exitButtonAction)
  *
  */
 
@@ -44,8 +45,7 @@ public class LogInFailedController implements EventHandler <ActionEvent>{
 		}
 	}
 	/**
-	 * @author Elliott Soler
-	 * exitButtonAction closes the application completely when "exit" is clicked
+	 * closes the application completely when "exit" is clicked
 	 */
 	@FXML public javafx.scene.control.Button exitButton;
 	
@@ -57,8 +57,5 @@ public class LogInFailedController implements EventHandler <ActionEvent>{
 		} catch(Exception exception) {
 			exception.printStackTrace();
 		}
-		
 	}
-	
-
 }
