@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -16,6 +17,7 @@
             <Label fx:id="loggedInUser" layoutX="224.0" layoutY="110.0" prefHeight="25.0" prefWidth="203.0" text="Default" />
             <Label layoutX="145.0" layoutY="135.0" prefHeight="25.0" prefWidth="66.0" text="Your PIN is:" />
             <Label fx:id="pinField" layoutX="224.0" layoutY="135.0" prefHeight="25.0" prefWidth="54.0" text="null" />
+            <Button fx:id="exitButton" layoutX="450.0" layoutY="380.0" mnemonicParsing="false" onAction="#exitButtonAction" text="Exit" />
          </children>
       </Pane>
    </children>

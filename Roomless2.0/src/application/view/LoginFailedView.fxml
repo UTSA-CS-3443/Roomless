@@ -10,12 +10,13 @@
    <children>
       <Pane layoutX="-100.0" layoutY="-100.0" prefHeight="571.0" prefWidth="598.0">
          <children>
-            <Button layoutX="329.0" layoutY="416.0" mnemonicParsing="false" onAction="#retry" text="Return" />
+            <Button layoutX="344.0" layoutY="416.0" mnemonicParsing="false" onAction="#retry" text="Return" />
             <Label layoutX="242.0" layoutY="197.0" prefHeight="157.0" prefWidth="226.0" text="Login Failed!">
                <font>
                   <Font size="39.0" />
                </font>
             </Label>
+            <Button fx:id="exitButton" layoutX="258.0" layoutY="416.0" mnemonicParsing="false" onAction="#exitButtonAction" text="Exit" />
          </children>
       </Pane>
    </children>

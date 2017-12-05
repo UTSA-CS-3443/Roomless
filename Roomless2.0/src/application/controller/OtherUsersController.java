@@ -54,5 +54,21 @@ public class OtherUsersController implements EventHandler<ActionEvent> {
 		}
 
 	}
+	
+	/**
+	 * @author Elliott Soler
+	 * exitButtonAction closes the application completely when "exit" is clicked
+	 */
+	@FXML public javafx.scene.control.Button exitButton;
+	
+	@FXML
+	public void exitButtonAction() {
+		try {
+			Main.stage = (Stage) exitButton.getScene().getWindow();
+			Main.stage.close();
+		} catch(Exception exception) {
+			exception.printStackTrace();
+		}
+	}
 
 }

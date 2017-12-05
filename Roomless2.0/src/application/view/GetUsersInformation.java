@@ -3,6 +3,8 @@ package application.view;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -77,6 +79,22 @@ public class GetUsersInformation {
 			Main.stage.setScene(new Scene (root3, 700, 500));
 			Main.stage.show();
 		} catch (Exception exception) {
+			exception.printStackTrace();
+		}
+	}
+	
+	/**
+	 * @author Elliott Soler
+	 * exitButtonAction closes the application completely when "exit" is clicked
+	 */
+	@FXML public javafx.scene.control.Button exitButton;
+	
+	@FXML
+	public void exitButtonAction() {
+		try {
+			Main.stage = (Stage) exitButton.getScene().getWindow();
+			Main.stage.close();
+		} catch(Exception exception) {
 			exception.printStackTrace();
 		}
 	}

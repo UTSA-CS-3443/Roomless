@@ -25,6 +25,7 @@
               </content>
             </ScrollPane>
             <Button layoutX="546.0" layoutY="14.0" mnemonicParsing="false" onAction="#viewMain" text="Return" />
+            <Button fx:id="exitButton" layoutX="471.0" layoutY="14.0" mnemonicParsing="false" onAction="#exitButtonAction" text="Exit" />
          </children></Pane>
    </children>
 </AnchorPane>
