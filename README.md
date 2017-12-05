@@ -15,3 +15,5 @@ Instructions:
   4. Create an account
   5. Take the test
   6. View other users and find your perfect match!
+
+** USER INFORMATION WILL BE STORED IN THE TEXT FILE DATA.TXT **
