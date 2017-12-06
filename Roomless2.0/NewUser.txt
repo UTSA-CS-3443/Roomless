@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-hwtrbs,htwrehb
-=======
-d,0569,d
->>>>>>> branch 'master' of https://github.com/UTSA-CS-3443/Roomless.git
+b,3279,b

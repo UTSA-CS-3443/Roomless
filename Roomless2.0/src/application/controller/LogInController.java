@@ -1,5 +1,6 @@
 package application.controller;
 
+import application.model.Account;
 import application.model.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -58,7 +59,9 @@ public class LogInController implements EventHandler <ActionEvent> {
 		String name = UserName1.getText( );
 		String Pin = PIN.getText( );
 		
-		if(readAndComp(name, Pin)) {
+		Account account = new Account(name, Pin);
+		
+		if(readAndComp(account.getName(), account.getPIN())) {
 			viewMain();
 		}else{
 			viewFailure();
